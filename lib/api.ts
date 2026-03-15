@@ -6,13 +6,14 @@ interface ApiResponse<T> {
   error?: string;
 }
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://fakestoreapi.com';
 // API interceptor wrapper
 async function apiFetch<T>(url: string, options?: RequestInit): Promise<ApiResponse<T>> {
   try {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
 
-    const response = await fetch(`https://fakestoreapi.com${url}`, {
+    const response = await fetch(`${baseUrl}${url}`, {
       ...options,
       signal: controller.signal,
       headers: {
@@ -73,7 +74,7 @@ export interface ProductFilters {
 
 export const login = async (username: string, password: string): Promise<ApiResponse<{ token: string }>> => {
   try {
-    const response = await fetch(`https://fakestoreapi.com/auth/login`, {
+    const response = await fetch(`${baseUrl}/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
