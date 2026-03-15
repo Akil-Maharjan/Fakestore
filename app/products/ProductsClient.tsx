@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -17,12 +17,12 @@ interface ProductsClientProps {
   error?: string;
 }
 
-const ProductsClient: React.FC<ProductsClientProps> = ({
+function ProductsClientContent({
   initialProducts,
   initialCategories,
   maxPrice,
   error
-}) => {
+}: ProductsClientProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { addItem } = useCart();
@@ -436,5 +436,11 @@ const ProductsClient: React.FC<ProductsClientProps> = ({
     </div>
   );
 };
+
+const ProductsClient: React.FC<ProductsClientProps> = (props) => (
+  <Suspense fallback={<div className="text-center py-8">Loading products...</div>}>
+    <ProductsClientContent {...props} />
+  </Suspense>
+);
 
 export default ProductsClient;
