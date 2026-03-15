@@ -92,11 +92,7 @@ const Services = () => {
                 className="object-cover"
               />
 
-              <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                <p className="text-white text-xl font-semibold">
-                  Drag →
-                </p>
-              </div>
+              
 
             </div>
           ))}
@@ -109,7 +105,7 @@ const Services = () => {
       {/* PARTNERS */}
       <div className="max-w-7xl mx-auto px-4 mt-24 text-center">
 
-        <h3 className="text-2xl font-semibold mb-12">
+        <h3 className="text-2xl font-semibold mb-5">
           Our Partners
         </h3>
 

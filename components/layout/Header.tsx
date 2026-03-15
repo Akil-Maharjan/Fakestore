@@ -119,14 +119,14 @@ const Header = () => {
                 {isAuthenticated ? (
                   <button
                     onClick={handleLogout}
-                    className="relative flex gap-2 bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors duration-200"
+                    className="relative cursor-pointer flex gap-2 bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors duration-200"
                   >
                     Logout
                   </button>
                 ) : (
                   <Link
                     href="/login"
-                    className="relative flex gap-2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-200"
+                    className="relative cursor-pointer flex gap-2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-200"
                   >
                     Login
                     <LogIn className="h-6 w-6" />

@@ -65,7 +65,7 @@ const CartClient = () => {
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                      className="p-1 border border-gray-300 rounded hover:bg-gray-50"
+                      className="p-1 cursor-pointer border border-gray-300 rounded hover:bg-gray-50"
                       disabled={item.quantity <= 1}
                     >
                       <Minus className="h-4 w-4" />
@@ -73,7 +73,7 @@ const CartClient = () => {
                     <span className="w-8 text-center">{item.quantity}</span>
                     <button
                       onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                      className="p-1 border border-gray-300 rounded hover:bg-gray-50"
+                      className="p-1 cursor-pointer border border-gray-300 rounded hover:bg-gray-50"
                     >
                       <Plus className="h-4 w-4" />
                     </button>
@@ -82,7 +82,7 @@ const CartClient = () => {
                     <p className="font-semibold">${(item.price * item.quantity).toFixed(2)}</p>
                     <button
                       onClick={() => removeItem(item.id)}
-                      className="text-red-600 hover:text-red-700 mt-1"
+                      className="text-red-600 cursor-pointer hover:text-red-700 mt-1"
                     >
                       <Trash2 className="h-4 w-4" />
                     </button>
@@ -107,7 +107,7 @@ const CartClient = () => {
                 <span>${getTotal().toFixed(2)}</span>
               </div>
             </div>
-            <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            <button className="w-full cursor-pointer bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
               Proceed to Checkout
             </button>
           </div>

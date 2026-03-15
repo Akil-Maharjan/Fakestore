@@ -358,7 +358,7 @@ function ProductsClientContent({
                     alt={product.title}
                     width={300}
                     height={300}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </Link>
@@ -388,7 +388,7 @@ function ProductsClientContent({
                         quantity: 1
                       });
                     }}
-                    className="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors"
+                    className="bg-blue-600 cursor-pointer text-white p-2 rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     <ShoppingCart className="h-4 w-4" />
                   </button>

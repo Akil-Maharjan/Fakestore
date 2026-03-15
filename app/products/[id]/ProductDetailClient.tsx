@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Product } from '@/types/prodcutTypes';
-import { ShoppingCart, Star, Heart, ArrowLeft, Plus, Minus } from 'lucide-react';
+import { ShoppingCart, Star, ArrowLeft, Plus, Minus } from 'lucide-react';
 import Link from 'next/link';
 import { useCart } from '@/components/cart/CartContext';
 import { isLoggedIn } from '@/lib/auth';
@@ -102,7 +102,7 @@ const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ product, erro
                 alt={product.title}
                 width={500}
                 height={500}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
@@ -139,7 +139,7 @@ const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ product, erro
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => handleQuantityChange(quantity - 1)}
-                  className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="p-2 cursor-pointer border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                   disabled={quantity <= 1}
                 >
                   <Minus className="h-4 w-4" />
@@ -147,7 +147,7 @@ const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ product, erro
                 <span className="w-16 text-center font-medium">{quantity}</span>
                 <button
                   onClick={() => handleQuantityChange(quantity + 1)}
-                  className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="p-2 cursor-pointer border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                   disabled={quantity >= 10}
                 >
                   <Plus className="h-4 w-4" />
@@ -159,7 +159,7 @@ const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ product, erro
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={handleAddToCart}
-                className={`flex-1 flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-colors ${
+                className={`flex-1 cursor-pointer flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-colors ${
                   isAddedToCart
                     ? 'bg-green-600 text-white'
                     : 'bg-blue-600 text-white hover:bg-blue-700'
@@ -168,26 +168,11 @@ const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ product, erro
                 <ShoppingCart className="h-5 w-5" />
                 {isAddedToCart ? 'Added to Cart!' : 'Add to Cart'}
               </button>
-              <button className="p-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                <Heart className="h-5 w-5" />
-              </button>
+              
             </div>
 
             {/* Product Info */}
-            <div className="border-t border-gray-200 pt-6 space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">Category</span>
-                <span className="font-medium capitalize">{product.category}</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">Availability</span>
-                <span className="font-medium text-green-600">In Stock</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">Shipping</span>
-                <span className="font-medium">Free shipping on orders over $50</span>
-              </div>
-            </div>
+           
 
             {/* Back Button */}
             <Link
