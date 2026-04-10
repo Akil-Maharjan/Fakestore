@@ -43,7 +43,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </ClientProviders>
-        <script src="https://cdn.chatbot.co/widget.min.js" 
+        <script src="https://orbitchat.vercel.app/widget/chat-widget.iife.js" 
   data-chatbot-id="64ec5db1-6638-4031-a7b1-c6945640aa4a"
   data-api-key="vrit_RM0mph-OrAZTKzvt9mICEZMjoidZRoyRc0IysJRJlAE"
   data-domain-name="https://fakestore-gules.vercel.app"
