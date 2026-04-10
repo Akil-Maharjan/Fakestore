@@ -43,14 +43,14 @@ export default function RootLayout({
           {children}
           <Footer />
         </ClientProviders>
-      <script>
-  window.ChatWidgetConfig = {
-    apiKey: "vrit_RM0mph-OrAZTKzvt9mICEZMjoidZRoyRc0IysJRJlA",
-    chatBotId: "64ec5db1-6638-4031-a7b1-c6945640aa4a",
-    config: { zIndex: 9999, rightOffset: 40, bottomOffset: 40 }
-  };
+<script src="https://orbitchat-fronted.vercel.app/widget/chat-widget.life.js" 
+  data-chatbot-id="64ec5db1-6638-4031-a7b1-c6945640aa4a"
+  data-api-key="vrit_Qz3tvbEc4wBQddumIkvD4r8OeohVGwrALbfH8zpAPc4"
+  data-right-offset="40"
+  data-bottom-offset="40"
+  data-z-index="9999"
+  async>
 </script>
-<script src="https://orbitchat.vercel.app/widget/chat-widget.iife.js" async></script>
       </body>
       
     </html>
