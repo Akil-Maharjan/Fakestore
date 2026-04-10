@@ -43,15 +43,14 @@ export default function RootLayout({
           {children}
           <Footer />
         </ClientProviders>
-        <script src="https://orbitchat.vercel.app/widget/chat-widget.iife.js" 
-  data-chatbot-id="64ec5db1-6638-4031-a7b1-c6945640aa4a"
-  data-api-key="vrit_RM0mph-OrAZTKzvt9mICEZMjoidZRoyRc0IysJRJlAE"
-  data-domain-name="https://fakestore-gules.vercel.app"
-  data-brand-name="OTT SATHI"
-  data-primary-color="#3a54ed"
-  data-position="bottom-right"
-  async>
+      <script>
+  window.ChatWidgetConfig = {
+    apiKey: "vrit_RM0mph-OrAZTKzvt9mICEZMjoidZRoyRc0IysJRJlA",
+    chatBotId: "64ec5db1-6638-4031-a7b1-c6945640aa4a",
+    config: { zIndex: 9999, rightOffset: 40, bottomOffset: 40 }
+  };
 </script>
+<script src="https://orbitchat.vercel.app/widget/chat-widget.iife.js" async></script>
       </body>
       
     </html>
