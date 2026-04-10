@@ -43,7 +43,17 @@ export default function RootLayout({
           {children}
           <Footer />
         </ClientProviders>
+        <script src="https://cdn.chatbot.co/widget.min.js" 
+  data-chatbot-id="64ec5db1-6638-4031-a7b1-c6945640aa4a"
+  data-api-key="vrit_RM0mph-OrAZTKzvt9mICEZMjoidZRoyRc0IysJRJlAE"
+  data-domain-name="http://localhost:5173"
+  data-brand-name="OTT SATHI"
+  data-primary-color="#3a54ed"
+  data-position="bottom-right"
+  async>
+</script>
       </body>
+      
     </html>
   );
 }
