@@ -43,15 +43,17 @@ export default function RootLayout({
           {children}
           <Footer />
         </ClientProviders>
-<script src="https://orbitchat-fronted.vercel.app/widget/chat-widget.iife.js"
+<Script 
+id=""
+src="https://orbitchat-fronted.vercel.app/widget/chat-widget.iife.js"
   data-chatbot-id="a673d389-21bb-40e4-9961-b0da2969028e"
   data-api-key="vrit_l_2i2asL1KxAqbpoh9drcgE2bTrRT0WbQ6M1DmhlYZw"
   data-api-endpoint="https://test.orbitchat.ai"
   data-right-offset="40"
   data-bottom-offset="40"
-  data-z-index="9999"
-  async>
-</script>
+  data-z-index="9999" 
+  >
+</Script>
       </body>
       
     </html>
