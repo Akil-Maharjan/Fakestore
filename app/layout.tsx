@@ -4,6 +4,7 @@ import { Poppins, Inter } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ClientProviders from "@/components/providers/ClientProviders";
+import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -43,6 +44,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </ClientProviders>
+        
 <Script 
 id=""
 src="https://orbitchat-fronted.vercel.app/widget/chat-widget.iife.js"
