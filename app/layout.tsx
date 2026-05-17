@@ -45,8 +45,8 @@ export default function RootLayout({
         </ClientProviders>
         
 <script src="https://orbitchat-fronted.vercel.app/widget/chat-widget.iife.js"
-  data-chatbot-id="a673d389-21bb-40e4-9961-b0da2969028e"
-  data-api-key="vrit_l_2i2asL1KxAqbpoh9drcgE2bTrRT0WbQ6M1DmhlYZw"
+  data-chatbot-id="b9a32d74-fb98-42ef-b57f-6b665a32b424"
+  data-api-key="vrit_N3wOtP7zCw7V4nCtExYiQOM4FK3xmtyMT8HmWGDfkno"
   data-api-endpoint="https://test.orbitchat.ai"
   data-right-offset="40"
   data-bottom-offset="40"
